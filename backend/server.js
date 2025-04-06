@@ -12,9 +12,9 @@ const __dirname = path.dirname(__filename);
 // Load environment variables
 dotenv.config({ path: path.join(__dirname, ".env") });
 
-const PORT = process.env.PORT || 3000;
+// Optional logging for debug
+console.log("🔐 GROQ_API_KEY:", process.env.GROQ_API_KEY ? "Loaded ✅" : "Missing ❌");
 
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
-    console.log("🔐 GROQ_API_KEY:", process.env.GROQ_API_KEY ? "Loaded ✅" : "Missing ❌");
-});
+// 🚫 Do NOT listen here (Vercel handles it)
+// Just export the app
+export default app;
