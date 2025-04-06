@@ -1,20 +1,11 @@
-// backend/server.js
-
 import dotenv from "dotenv";
-import path from "path";
-import { fileURLToPath } from "url";
 import app from "./src/app.js";
 
-// Setup __dirname for ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 // Load environment variables
-dotenv.config({ path: path.join(__dirname, ".env") });
+dotenv.config();
 
-// Optional logging for debug
-console.log("🔐 GROQ_API_KEY:", process.env.GROQ_API_KEY ? "Loaded ✅" : "Missing ❌");
+const PORT = process.env.PORT || 3000;
 
-// 🚫 Do NOT listen here (Vercel handles it)
-// Just export the app
-export default app;
+app.listen(PORT, () => {
+    console.log(`🚀 Server is running on port ${PORT}`);
+});
