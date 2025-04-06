@@ -1,0 +1,13 @@
+{
+  "name": "ai-code-reviewer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node backend/server.js",
+    "build": "cd frontend && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
