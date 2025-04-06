@@ -130,7 +130,14 @@ function App() {
           </ErrorBoundary>
         </div>
       </div>
+
+
+      {/* Footer */}
+      <footer className="mt-auto w-full text-center py-4 text-sm text-gray-500 border-t border-gray-700">
+        Built with by Sri
+      </footer>
     </div>
+
   );
 }
 
