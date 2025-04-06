@@ -34,9 +34,8 @@ function App() {
 
   async function reviewCode() {
     try {
-      const response = await axios.post("http://192.168.29.115:3000/ai/get-review", {
-        code,
-      });
+      const response = await axios.post("/api/ai/get-review", { code });
+
 
       const data = response.data;
       const reviewText =
