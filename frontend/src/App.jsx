@@ -34,7 +34,7 @@ function App() {
 
   async function reviewCode() {
     try {
-      await axios.post("/api/ai/get-review", { code });
+      await axios.post("/ai/get-review", { code });
 
 
       const data = response.data;
