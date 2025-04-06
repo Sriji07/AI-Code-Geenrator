@@ -34,7 +34,7 @@ function App() {
 
   async function reviewCode() {
     try {
-      const response = await axios.post("/api/ai/get-review", { code });
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/ai/get-review`, { code });
 
 
       const data = response.data;
